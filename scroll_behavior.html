@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Joel mock</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<style>
+#nav1, .topRow {
+	width:1100px!important;
+	height:130px;
+	min-height:82px;
+}
+#nav1 .PremeraLogo{
+	position:fixed;
+	top:0;
+	width:202px;
+}
+#nav1 .TopContact{
+	position:fixed;
+	width:900px;
+	top:0;
+	right:68px;
+}
+#nav1 .menus{
+	position:relative;
+	top:83px;
+	left:0;
+	z-index:1000;
+}
+#nav1 .user{
+	position:relative;
+	top:83px;
+	left:320px;
+}
+#nav1{
+	border-bottom: 1px solid #0099d8;z-index:1000;background-color: white;
+}
+#subNav, #bodyContent, #pageTitle{
+	position:relative;
+
+}
+#subNav{
+		left:-101px;
+}
+#bodyContent{
+	left:-80px;
+}
+#pageTitle{
+	left:-8px;
+}
+
+</style>
+<script type="text/javascript">
+	
+$(window).scroll(function (){
+		// console.log("scroller here");
+		// var mP = $(".menus").position();
+		 if ($(document).scrollTop() < 45){
+			// $(".menus").position().left = $(document).scrollTop()*3;
+			$(".menus").css("left",$(document).scrollTop()*5);
+
+			$(".topContact").css("right",68 - $(document).scrollTop()*10);
+			$("#nav1").css("position","relative");
+			$("#nav1 .menus").css("top","83px");
+			$("#nav1 .user").css("top","83px");
+			$("#nav1").css("height","130px");
+			$("#pageTitle").css("padding-top","0");
+		 }
+		if ($(document).scrollTop() >= 45){
+			// $(".menus").css("left","225px");
+			$("#nav1").css("position","fixed");
+			$("#nav1 .menus").css("top","35px");
+			$(".user").css("top","36px");
+			$("#nav1").css("height","83px");
+			$("#pageTitle").css("padding-top","128px");
+			$("#pageTitle").css("left","-8px");
+			$("#subNav").css("position","relative");
+			$("#bodyContent").css("position","relative");
+						$("#subNav").css("position","relative");
+			$("#subNav").css("top","0");
+			$("#subNav").css("left","-104px");
+			$("#subNav").css("z-index","999");
+			$("#bodyContent").css("padding-top","0")
+			$("#mask").css("position","absolute");
+			$("#mask").css("left","0");
+			$("#mask").css("z-index","998");
+			$("#mask").css("height","0");
+			$("#mask").css("width","100%");
+			$("#mask").css("background-color","white");
+
+			}
+		if ($(document).scrollTop() >= 140){
+			$("#subNav").css("position","fixed");
+			$("#subNav").css("top","83px");
+			$("#subNav").css("left","166px");
+			$("#subNav").css("z-index","999");
+			$("#bodyContent").css("padding-top","80px");
+			$("#mask").css("position","fixed");
+			$("#mask").css("left","0");
+			$("#mask").css("z-index","998");
+			$("#mask").css("height","167px");
+			$("#mask").css("width","100%");
+			$("#mask").css("background-color","white");
+
+		}
+
+		});
+
+</script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	<div class="container">
+<!-- Save for Web Slices (Joel mock.png) -->
+<div id="mask"></div>
+		<div id="nav1" class="row">
+			<div class="topRow">
+				<img src="images/Joel-mock_02.gif" class="PremeraLogo">
+				<img src="images/Joel-mock_03.gif" class="TopContact">
+				<img src="images/Joel-mock_04.gif" class="menus">
+				<img src="images/Joel-mock_06.gif" class="user">
+			</div>
+<!-- 		<div id="nav2" class="row">
+			<div class="topRow">
+				<img src="images/Joel-mock_02.gif" class="PremeraLogo">
+				<img src="images/Joel-mock_04.gif" class="menus">
+				<img src="images/Joel-mock_06.gif" class="user">
+			</div> -->
+		</div>
+		<div class="row" id="stage2">
+			<div id="pageTitle">
+				<img src="images/Joel-mock_07.gif">
+			</div>
+			<div id="subNav">
+				<img src="images/Joel-mock_08.gif">
+			</div>
+			<div id="bodyContent">
+				<img src="images/Joel-mock_09.gif">
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
